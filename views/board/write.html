@@ -1,0 +1,11 @@
+{% extends "_layout.html" %}
+{% block content %}
+<form method="post" action="/board/write">
+    <ul>
+        <li>글제목 : <input type="text" name="subject"></li>
+        <li>작성자 : <input type="text" name="username"></li>
+        <li>작성일 : <input type="text" name="date"></li>
+        <input type="submit" value="글쓰기">
+    </ul>
+</form>
+{% endblock %}

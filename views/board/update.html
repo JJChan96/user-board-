@@ -1,0 +1,13 @@
+{% extends "_layout.html" %}
+{% block content %}
+<form method="post" action="/board/update">
+    <input type="hidden" name="index" value="{{index}}">
+    <ul>
+        <li>글제목 : <input type="text" name="subject" value="{{data.subject}}"></li>
+        <li>작성자 : <input type="text" name="username" value="{{data.username}}"></li>
+        <li>작성일 : <input type="text" name="date" value="{{data.date}}"></li>
+        <input type="submit" value="글수정">
+    </ul>
+</form>
+<a href="/board/list">글목록</a>
+{% endblock %}

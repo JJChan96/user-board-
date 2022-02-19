@@ -1,0 +1,13 @@
+{% extends "_layout.html" %}
+{% block content %}
+<ul>
+    <li>글제목 : {{ data.subject }} </li>
+    <li>작성자 : {{ data.username }} </li>
+    <li>작성일 : {{ data.date }}</li>
+</ul>
+<form method="post" action="/board/delete">
+    <input type="submit" value="글삭제">
+    <input type="hidden" name="index" value="{{index}}">
+</form>
+<a href="/board/update?index={{index}}">글수정</a>
+{% endblock %}
